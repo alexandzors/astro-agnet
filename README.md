@@ -1,6 +1,6 @@
 # Website repository for Alex's Guardian
 
-[![social-preview-image](.github/social-img.svg)](https://alexsguardian.net)
+[![social-preview-image](public/social-preview-image.png)](https://alexsguardian.net)
 
 ## Development Info
 
