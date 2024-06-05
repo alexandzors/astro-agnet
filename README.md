@@ -1,12 +1,34 @@
-# Accessible Astro Starter
+# Website repository for Alex's Guardian
 
-![social-preview-image](https://user-images.githubusercontent.com/3909046/219942674-9894853e-def8-4180-84b8-6b577dacfcaa.png)
+[![social-preview-image](.github/social-img.svg)](https://alexsguardian.net)
 
-Accessible Astro Starter is a ready to use, SEO and a11y friendly blogging theme. It contains plenty of accessible components to build several page types, Tailwind CSS to help you build faster and example pages such as a dynamic Blog, 404, Markdown and MDX. This theme is designed to help you build your project faster and provide a solid base for accessibility!
+## Development Info
 
-🚀 [Live Preview](https://accessible-astro.netlify.app/)
+Clone this theme locally and run any of the following commands in your terminal:
 
-## ♿ (Accessibility) Features
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:4321`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
+
+## Contributing Info
+
+Any and all changes must be approved by [Alex](https://github.com/alexandzors). All contributed code must pass CodeQL checks and all commits must be signed.
+
+<br>
+<br>
+
+## Theme Stuff
+
+Alex's Guardian is built on the Accessible Astro Starter theme.
+
+> Accessible Astro Starter is a ready to use, SEO and a11y friendly blogging theme. It contains plenty of accessible components to build several page types, Tailwind CSS to help you build faster and example pages such as a dynamic Blog, 404, Markdown and MDX. This theme is designed to help you build your project faster and provide a solid base for accessibility!
+
+- [Theme repository](https://github.com/markteekman/accessible-astro-starter)
+
+### (Accessibility) Features
 
 - Astro 4.0
 - Tailwind CSS support
@@ -32,34 +54,3 @@ Accessible Astro Starter is a ready to use, SEO and a11y friendly blogging theme
 - Ships with many components such as Accordions, Breadcrumbs, Modals, Pagination [and many more](https://accessible-astro.dev/accessible-components)
 - A collection of utility classes such as breakpoints, button classes, font settings, resets and outlines in `src/assets/scss/base`
 - View Transitions (⚠️ see [astro-docs](https://docs.astro.build/en/guides/view-transitions/#accessibility) for accessibility considerations)
-
-## 🚀 Getting started
-
-Clone this theme locally and run any of the following commands in your terminal:
-
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:4321`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 📦 Other Accessible Astro projects
-
-- [Accessible Astro Dashboard](https://github.com/markteekman/accessible-astro-dashboard/)
-- [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components/)
-
-## ❤️ Helping out
-
-If you find that something isn't working right then I'm always happy to hear it to improve this starter! You can contribute in many ways and forms. Let me know by either:
-
-1. [Filing an issue](https://github.com/markteekman/accessible-astro-starter/issues)
-2. [Submitting a pull request](https://github.com/markteekman/accessible-astro-starter/pulls)
-3. [Starting a discussion](https://github.com/markteekman/accessible-astro-starter/discussions)
-4. [Buying me a coffee!](https://www.buymeacoffee.com/markteekman)
-
-## ☕ Thank you!
-
-A big thank you to the creators of the awesome Astro static site generator and to all using this starter to make the web a bit more accessible for all people around the world :)
-
-[![buymeacoffee-button](https://user-images.githubusercontent.com/3909046/150683481-be070424-7bb0-4dd7-a3cb-43b5605163f5.png)](https://www.buymeacoffee.com/markteekman)

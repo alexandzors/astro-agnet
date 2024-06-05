@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { src = '/astronaut-hero-img.webp' } = Astro.props
+const { src = '/hero.webp' } = Astro.props
 ---
 
 <section class="hero my-24">
@@ -9,20 +9,23 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+          <slot><span class="text-gradient">Alex's Guardian</span></slot>
         </h1>
+        <h3 >
+          <slot>Transparent IT, No Surprises.</slot>
+        </h3>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
-            <Icon name="ion:star-outline" />
-            Star on GitHub
+          <a class="button has-icon" href="mailto:info@alexsguardian.net">
+            <Icon name="ion:email" />
+            Contact Us
           </a>
-          <a
+          <!-- <a
             class="button has-icon color-secondary"
             href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
           >
             <Icon name="ion:bookmark-outline" />
             Read the Docs
-          </a>
+          </a> -->
         </div>
       </div>
       <img class="hidden lg:block" src={src} alt="" decoding="async" />

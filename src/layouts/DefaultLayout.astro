@@ -6,11 +6,11 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
 const {
-  title = 'Astro',
-  description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
+  title = "Alex's Guardian",
+  description = "Alex's Guardian is an IT consulting & servicing company based out of Lancaster County, PA.",
   url,
   image = '/social-preview-image.png',
-  author = 'Mark Teekman',
+  author = 'Alexander Henderson',
 } = Astro.props
 ---
 
@@ -28,7 +28,7 @@ const {
       description={description.substring(0, 100)}
       url={Astro.site
         ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
+        : `https://alexsguardian.net/${title.toLowerCase().replaceAll(' ', '-')}`}
       image={image}
       author={author}
     />
