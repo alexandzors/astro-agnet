@@ -2,6 +2,10 @@
 
 [![social-preview-image](public/social-preview-image.png)](https://alexsguardian.net)
 
+## Website Info
+
+The current website (wordpress :vomiting_face:) died at the beginning of this year. So rebuilding it in Astro.
+
 ## Development Info
 
 Clone this theme locally and run any of the following commands in your terminal:
