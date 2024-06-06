@@ -4,14 +4,16 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
 <DefaultLayout title="404">
   <section class="my-12">
-    <div class="container">
+    <div class="container" style="display: flex; justify-content: center;">
       <h1>404</h1>
     </div>
   </section>
   <section class="my-12">
-    <div class="space-content container">
-      <p class="text-2xl">This page does not exist. Don't worry though, we got you.</p>
-      <a class="button" href="/">Let's get you home Astronout 🚀</a>
+    <div class="space-content container" style="display: flex; justify-content: center;">
+      <p class="text-2xl">Oops! That page does not exist. We logged it so you don't have to worry.</p>
+    </div>
+    <div class="space-content container" style="margin-top: 2rem; display: flex; justify-content: center;">
+      <a class="button" href="/">Return home</a>
     </div>
   </section>
 </DefaultLayout>

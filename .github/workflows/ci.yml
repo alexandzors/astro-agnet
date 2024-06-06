@@ -1,0 +1,152 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  prod:
+    if: github.ref =='refs/heads/main' && !contains(github.event.head_commit.message, '!noci')
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.12.1'
+          cache: 'npm'
+      
+      - name: Public IP
+        id: ip
+        uses: candidob/get-runner-ip@v1.0.0
+
+      - name: Setup Linode Cloud Firewall
+        uses: linode/action-linode-cli@v1
+        with:
+          token: "${{ secrets.LINODE_CLI_TOKEN }}"
+
+      - name: build dev
+        id: build
+        run: |
+          sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
+          npm install
+          npm run build
+      
+      - name: test production site
+        uses: chabad360/htmlproofer@master
+        id: testing
+        with:
+          directory: "./dist/"
+          arguments: --disable-external --checks --allow-hash-href --ignore_urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+      - name: Setup SSH
+        id: ssh-setup
+        run: |
+          mkdir ~/.ssh
+          touch ~/.ssh/known_hosts
+          echo ${{ secrets.LINODEFINGERPRINT }} >> ~/.ssh/known_hosts
+
+      - name: Open Linode Cloud Firewall for GH
+        if: (steps.ssh-setup.outcome  == 'success')
+        id: linode-fw-open
+        env:
+          PUB_IP: "${{ steps.ip.outputs.ipv4 }}/32"
+          HOME_IP: "${{ secrets.HOMEIP }}"
+          LINODE_FW_ID: "${{ secrets.LINODE_FW_ID }}"
+        run: |
+          wget https://raw.githubusercontent.com/alexandzors/utils/main/linode-scripts/linode.sh
+          bash ./linode.sh -a --verbose
+      
+      - name: deploy blog
+        uses: burnett01/rsync-deployments@5.2.1
+        id: deploy
+        with:
+          switches: -avr
+          path: ./dist/
+          remote_path: /opt/sites/agnet/
+          remote_host: ${{ secrets.LINODEHOST }}
+          remote_port: 22
+          remote_user: ${{ secrets.LINODEUSER }}
+          remote_key: ${{ secrets.LINODESSHKEY }}
+
+      - name: Close Linode Cloud Firewall for GH
+        if: always()
+        id: linode-fw-close
+        run: |
+          bash ./linode.sh -d --verbose
+
+  dev:
+    if: github.ref =='refs/heads/dev' && !contains(github.event.head_commit.message, '!noci')
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.12.1'
+          cache: 'npm'
+      
+      - name: Public IP
+        id: ip
+        uses: candidob/get-runner-ip@v1.0.0
+
+      - name: Setup Linode Cloud Firewall
+        uses: linode/action-linode-cli@v1
+        with:
+          token: "${{ secrets.LINODE_CLI_TOKEN }}"
+
+      - name: build dev
+        id: build
+        run: |
+          sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID_DEV }}'#g' ./src/layouts/DefaultLayout.astro
+          npm install
+          npm run build
+      
+      - name: test production site
+        uses: chabad360/htmlproofer@master
+        id: testing
+        with:
+          directory: "./dist/"
+          arguments: --disable-external --checks --allow-hash-href --ignore_urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+      - name: Setup SSH
+        id: ssh-setup
+        run: |
+          mkdir ~/.ssh
+          touch ~/.ssh/known_hosts
+          echo ${{ secrets.LINODEFINGERPRINT }} >> ~/.ssh/known_hosts
+
+      - name: Open Linode Cloud Firewall for GH
+        if: (steps.ssh-setup.outcome  == 'success')
+        id: linode-fw-open
+        env:
+          PUB_IP: "${{ steps.ip.outputs.ipv4 }}/32"
+          HOME_IP: "${{ secrets.HOMEIP }}"
+          LINODE_FW_ID: "${{ secrets.LINODE_FW_ID }}"
+        run: |
+          wget https://raw.githubusercontent.com/alexandzors/utils/main/linode-scripts/linode.sh
+          bash ./linode.sh -a --verbose
+      
+      - name: deploy blog
+        uses: burnett01/rsync-deployments@5.2.1
+        id: deploy
+        with:
+          switches: -avr
+          path: ./dist/
+          remote_path: /opt/sites/agnet-dev/
+          remote_host: ${{ secrets.LINODEHOST }}
+          remote_port: 22
+          remote_user: ${{ secrets.LINODEUSER }}
+          remote_key: ${{ secrets.LINODESSHKEY }}
+
+      - name: Close Linode Cloud Firewall for GH
+        if: always()
+        id: linode-fw-close
+        run: |
+          bash ./linode.sh -d --verbose

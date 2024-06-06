@@ -10,49 +10,60 @@ import ContentMedia from '../components/ContentMedia.astro'
   <Hero />
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
+      <h2 class="mb-16 text-6xl">Services</h2>
       <h4 style="font-size: 1rem">We offer a lot of different services for end users and small businesses. Don't see something listed here? Reach out anyway and we can see about helping for point you in the right direction!</h4>
       <br>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="ion:wrench" title="Maintenance">
-          Looking to save money, or just want your device to last longer?
+        <Feature icon="ion:call" title="Remote Support">
+          Fast and reliable remote troubleshooting and support to resolve your IT issues without needing a site visit.
         </Feature>
-        <Feature icon="mdi:wallet" title="Purchasing Help">
-          Need a new device but don't know what to get?
+        <Feature icon="ion:wrench" title="Device Maintenance">
+          Ensure your devices run smoothly and efficiently with our comprehensive maintenance services. Extend the life of your devices!
         </Feature>
-        <Feature icon="mdi:virus" title="Infection Extermination">
-          Is your PC infected with malware or viruses? We can help!
+        <Feature icon="mdi:wallet" title="Device Consultancy">
+          Expert advice on selecting, setting up, and optimizing devices to meet your specific needs, ensuring seamless integration and enhanced performance.
+        </Feature>
+        <Feature icon="mdi:virus" title="Virus and Malware Removal">
+          Is your PC infected with malware or viruses? We can help eliminate threats and secure your system!
+        </Feature>
+        <Feature icon="mdi:server" title="Home Server Setup">
+          Host your own services at home or decouple from the cloud with our expert home server solutions.
+        </Feature>
+        <Feature icon="mdi:cable-data" title="Network Design and Upgrade">
+          Upgrade your network with our tailored design and optimization services for better connectivity and performance.
+        </Feature>
+        <Feature icon="mdi:hammer-screwdriver" title="Custom PC Builds">
+          Whether you need a high-performance PC or one that fits your budget, we can build it for you! 
+        </Feature>
+        <Feature icon="mdi:data" title="Data Recovery Services">
+          Recover lost data from failed or broken devices with our specialized recovery solutions.
+        </Feature>
+        <Feature icon="mdi:cctv" title="Home & SMB Surveillance Solutions">
+          Secure your home or business with our comprehensive security camera systems, providing peace of mind while you’re away.
+        </Feature>
+        <Feature icon="ion:md-cloud-upload" title="Backup Solutions">
+          Protect your data with automated onsite or cloud backup services. Ensure your information is safe and easily recoverable in the event of a disaster.
+        </Feature>
+        <Feature icon="ion:ios-settings" title="Software Installation and Configuration">
+          Assistance with installing and configuring software to ensure it runs optimally on your devices.
+        </Feature>
+        <Feature icon="ion:hardware-chip" title="Hardware Upgrades">
+          Boost the performance of your existing devices with our hardware upgrade services.
+        </Feature>
+        <Feature icon="mdi:printer-wireless" title="Printer Setup and Troubleshooting">
+          Ensure your printers are correctly set up and maintained for hassle-free printing.
         </Feature>
       </div>
-      <br>
-      <p>TODO: Add services</p>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
-    <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
-    </p>
-  </ContentMedia>
+
   <section class="mb-32 mt-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
+        <Counter count="20+" title="Happy" sub="end users" />
+        <Counter count="6+" title="Happy" sub="small businesses" />
+        <Counter count="7+" title="Years" sub="in service" />
+        <Counter count="4.9" title="Rating" sub="Based on user Feedback" />
       </div>
     </div>
   </section>
