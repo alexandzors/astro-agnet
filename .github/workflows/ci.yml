@@ -74,7 +74,7 @@ jobs:
           remote_key: ${{ secrets.LINODESSHKEY }}
 
       - name: Close Linode Cloud Firewall for GH
-        if: (steps.deploy.outcome  == 'success') || (steps.deploy.outcome  == 'failed' || steps.deploy.outcome  == 'skipped')
+        if: always()
         id: linode-fw-close
         run: |
           bash ./linode.sh -d --verbose
@@ -145,7 +145,7 @@ jobs:
           remote_key: ${{ secrets.LINODESSHKEY }}
 
       - name: Close Linode Cloud Firewall for GH
-        if: (steps.deploy.outcome  == 'success') || (steps.deploy.outcome  == 'failed' || steps.deploy.outcome  == 'skipped')
+        if: always()
         id: linode-fw-close
         run: |
           bash ./linode.sh -d --verbose
