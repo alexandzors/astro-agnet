@@ -11,7 +11,7 @@ import { Image } from 'astro:assets';
             <p>This page contains some examples of projects Alex's Guardian has done.</p>
         </div>
         <div>
-            <ContentMedia imgSrc="/projects/custom-pc-1.webp" reverseImg={true}>
+            <ContentMedia imgSrc="/projects/custom-pc-1.webp" reverseImg={true} alt="Picture of a completed client's custom pc">
                 <h2>Custom Gaming PC</h2>
                 <p class="text-2xl">
                     A custom highend build for Chris V. This was a fun build and we think it turned out great! 
@@ -23,7 +23,7 @@ import { Image } from 'astro:assets';
                     Image taken by us.
                 </p>
               </ContentMedia>
-              <ContentMedia imgSrc="/projects/custom-pc-2.webp">
+              <ContentMedia imgSrc="/projects/custom-pc-2.webp" alt="Picture of a completed client's custom pc">
                 <h2>Custom Gaming PC</h2>
                 <p class="text-2xl">
                     Another custom highend build for Geoffery S. The Deep Cool AIO's infinity mirror CPU block looks sweet!
@@ -33,18 +33,6 @@ import { Image } from 'astro:assets';
                 </p>
                 <p style="font-size:small;">
                     Image provided by client.
-                </p>
-              </ContentMedia>
-              <ContentMedia imgSrc="/projects/rack-done-1.webp" reverseImg={true} alt="Picture of a completed client's network rack">
-                <h2>Network Build Out</h2>
-                <p class="text-2xl">
-                    A local business wanted to build out a network at their new building.
-                </p>
-                <p>
-                    We pulled 10,000ft of Cat 6a and used their existing networking equipment in the racks. Unfortunately, a CCTV camera was added last minute and we did not have enough keystone jacks. This was later rectified after this image was taken! Yellow cables are also from existing server infrastructure.
-                </p>
-                <p style="font-size:small;">
-                    Image taken by us.
                 </p>
               </ContentMedia>
               <p style="text-align: center;">
