@@ -14,6 +14,21 @@ const {
 } = Astro.props
 ---
 
+<!-- head -->
+<script
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id={GA_ID}">
+</script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "{GA_ID}");
+</script>
+<!-- more head -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
