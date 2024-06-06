@@ -32,7 +32,7 @@ jobs:
       - name: build dev
         id: build
         run: |
-          sed -i -e 's#{GA_ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
+          sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
       
@@ -104,7 +104,7 @@ jobs:
       - name: build dev
         id: build
         run: |
-          sed -i -e 's#{GA_ID}#'${{ secrets.GOOGLE_ANALYTICS_ID_DEV }}'#g' ./src/layouts/DefaultLayout.astro
+          sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID_DEV }}'#g' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
       
