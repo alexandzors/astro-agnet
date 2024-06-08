@@ -18,7 +18,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
-    assignees:
+    reviewers:
       - "alexandzors"
     open-pull-requests-limit: 5
     target-branch: "dev"
