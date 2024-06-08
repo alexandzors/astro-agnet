@@ -11,7 +11,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^3.0.1",
+    "@astrojs/mdx": "^3.1.0",
     "@astrojs/partytown": "^2.1.0",
     "@astrojs/tailwind": "^5.0.4",
     "@iconify-json/ion": "^1.1.15",
@@ -19,7 +19,7 @@
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
     "accessible-astro-components": "^2.3.6",
-    "astro": "^4.0.7",
+    "astro": "^4.10.0",
     "astro-compress": "^2.0.6",
     "astro-icon": "^1.0.2",
     "eslint": "^8.56.0",
@@ -30,6 +30,6 @@
     "prettier-plugin-tailwindcss": "^0.6.1",
     "sass": "^1.49.9",
     "svgo": "^3.2.0",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.4.4"
   }
 }

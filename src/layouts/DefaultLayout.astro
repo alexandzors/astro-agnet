@@ -7,27 +7,12 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = "Alex's Guardian",
-  description = "Alex's Guardian is an IT consulting & servicing company based out of Lancaster County, PA.",
+  description = "Alex's Guardian is an IT consulting & servicing company that specializes in mostly local end users and small businesses.Alex's Guardian is based out of Manheim, PA",
   url,
   image = '/social-preview-image.png',
   author = 'Alexander Henderson',
 } = Astro.props
 ---
-
-<!-- head -->
-<script
-  type="text/partytown"
-  src="https://www.googletagmanager.com/gtag/js?id={GA-ID}">
-</script>
-<script type="text/partytown">
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "{GA-ID}");
-</script>
-<!-- more head -->
 
 <html lang="en" dir="ltr">
   <head>
@@ -47,6 +32,21 @@ const {
       image={image}
       author={author}
     />
+    
+    <!-- Start Google Analytics Script -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id={GA-ID}">
+    </script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{GA-ID}");
+    </script>
+    <!-- End Google Analytics Script -->
   </head>
   <body>
     <Header />
