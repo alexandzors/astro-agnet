@@ -14,21 +14,6 @@ const {
 } = Astro.props
 ---
 
-<!-- head -->
-<script
-  type="text/partytown"
-  src="https://www.googletagmanager.com/gtag/js?id={GA-ID}">
-</script>
-<script type="text/partytown">
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "{GA-ID}");
-</script>
-<!-- more head -->
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -47,6 +32,21 @@ const {
       image={image}
       author={author}
     />
+    
+    <!-- Start Google Analytics Script -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id={GA-ID}">
+    </script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{GA-ID}");
+    </script>
+    <!-- End Google Analytics Script -->
   </head>
   <body>
     <Header />
