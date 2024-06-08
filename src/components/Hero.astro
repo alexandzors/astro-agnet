@@ -15,7 +15,7 @@ const { src = '/hero.webp' } = Astro.props
           <slot>Transparent IT, No Surprises.</slot>
         </h3>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="mailto:info@alexsguardian.net">
+          <a class="button has-icon color-secondary" href="mailto:info@alexsguardian.net">
             <Icon name="ion:email" />
             Contact Us
           </a>
@@ -28,7 +28,7 @@ const { src = '/hero.webp' } = Astro.props
           </a> -->
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <img class="hidden lg:block" src={src} alt="Laptop on a desk with a toolbag next to it" decoding="async" loading="lazy" height="743" width="710"/>
     </div>
   </div>
 </section>

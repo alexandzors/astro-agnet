@@ -35,13 +35,6 @@ jobs:
           sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
-      
-      - name: test production site
-        uses: chabad360/htmlproofer@master
-        id: testing
-        with:
-          directory: "./dist/"
-          arguments: --disable-external --checks --allow-hash-href --ignore_urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Setup SSH
         id: ssh-setup
@@ -108,12 +101,28 @@ jobs:
           npm install
           npm run build
       
-      - name: test production site
+      - name: htmlproofer test
         uses: chabad360/htmlproofer@master
-        id: testing
+        id: html-testing
         with:
           directory: "./dist/"
           arguments: --disable-external --checks --allow-hash-href --ignore_urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+      
+      - name: psi mobile test
+        uses: stefafafan/psi-action@v1
+        id: psi-m-testing
+        with:
+          url: "https://dev.alexsguardian.net"
+          strategy: mobile
+          key: ${{ secrets.PS_KEY }}
+
+      - name: psi desktop test
+        uses: stefafafan/psi-action@v1
+        id: psi-d-testing
+        with:
+          url: "https://dev.alexsguardian.net"
+          strategy: desktop
+          key: ${{ secrets.PS_KEY }}
 
       - name: Setup SSH
         id: ssh-setup
