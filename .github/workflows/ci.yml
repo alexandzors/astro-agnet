@@ -54,7 +54,11 @@ jobs:
           wget https://raw.githubusercontent.com/alexandzors/utils/main/linode-scripts/linode.sh
           bash ./linode.sh -a --verbose
       
-      - name: deploy blog
+      - name: remove test files
+        run: |
+          rm ./dist/testimonials.json
+      
+      - name: deploy site
         uses: burnett01/rsync-deployments@7.0.1
         id: deploy
         with:
@@ -142,7 +146,7 @@ jobs:
           wget https://raw.githubusercontent.com/alexandzors/utils/main/linode-scripts/linode.sh
           bash ./linode.sh -a --verbose
       
-      - name: deploy blog
+      - name: deploy site
         uses: burnett01/rsync-deployments@7.0.1
         id: deploy
         with:

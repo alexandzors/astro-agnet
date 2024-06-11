@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = "Alex's Guardian",
-  description = "Alex's Guardian is an IT consulting & servicing company that specializes in mostly local end users and small businesses.Alex's Guardian is based out of Manheim, PA",
+  description = "Alex's Guardian is an IT consulting & servicing company that specializes in mostly local end users and small businesses. Alex's Guardian is based out of Manheim, PA",
   url,
   image = '/social-preview-image.png',
   author = 'Alexander Henderson',
@@ -22,6 +22,7 @@ const {
 
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <SiteMeta
       title={title}
@@ -32,7 +33,7 @@ const {
       image={image}
       author={author}
     />
-    
+
     <!-- Start Google Analytics Script -->
     <script
       type="text/partytown"
