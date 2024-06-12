@@ -29,12 +29,13 @@ jobs:
         with:
           token: "${{ secrets.LINODE_CLI_TOKEN }}"
 
-      - name: build dev
+      - name: build prod
         id: build
         run: |
           sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
+          rm ./dist/testimonials.json
 
       - name: Setup SSH
         id: ssh-setup
@@ -53,10 +54,6 @@ jobs:
         run: |
           wget https://raw.githubusercontent.com/alexandzors/utils/main/linode-scripts/linode.sh
           bash ./linode.sh -a --verbose
-      
-      - name: remove test files
-        run: |
-          rm ./dist/testimonials.json
       
       - name: deploy site
         uses: burnett01/rsync-deployments@7.0.1
