@@ -32,10 +32,10 @@ jobs:
       - name: build prod
         id: build
         run: |
+          wget ${{ secrets.TESTIMONIAL_JSON_URL }} ./public
           sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
-          rm ./dist/testimonials.json
 
       - name: Setup SSH
         id: ssh-setup
@@ -102,6 +102,7 @@ jobs:
       - name: build dev
         id: build
         run: |
+          wget ${{ secrets.TESTIMONIAL_JSON_URL }} ./public
           sed -i -e 's#alexsguardian.net#dev.alexsugardian.net#g' ./src/components/SiteMeta.astro
           sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID_DEV }}'#g' ./src/layouts/DefaultLayout.astro
           sed -i '51i \ \ \ \ <Announcement />' ./src/layouts/DefaultLayout.astro
