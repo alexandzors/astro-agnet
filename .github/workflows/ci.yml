@@ -73,6 +73,10 @@ jobs:
       - name: Close Linode Cloud Firewall for GH
         if: always()
         id: linode-fw-close
+        env:
+          PUB_IP: "${{ steps.ip.outputs.ipv4 }}/32"
+          HOME_IP: "${{ secrets.HOMEIP }}"
+          LINODE_FW_ID: "${{ secrets.LINODE_FW_ID }}"
         run: |
           bash ./linode.sh -d --verbose
 
@@ -163,5 +167,9 @@ jobs:
       - name: Close Linode Cloud Firewall for GH
         if: always()
         id: linode-fw-close
+        env:
+          PUB_IP: "${{ steps.ip.outputs.ipv4 }}/32"
+          HOME_IP: "${{ secrets.HOMEIP }}"
+          LINODE_FW_ID: "${{ secrets.LINODE_FW_ID }}"
         run: |
           bash ./linode.sh -d --verbose
