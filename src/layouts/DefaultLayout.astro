@@ -26,17 +26,15 @@ const {
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- SiteMeta -->
-    <SiteMeta />
-
-<!--     <SiteMeta
+    <SiteMeta
       title={title}
-      description={description.substring(0, 100)}
+      description={description}
       url={Astro.site
         ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
         : `https://alexsguardian.net/${title.toLowerCase().replaceAll(' ', '-')}`}
       image={image}
       author={author}
-    /> -->
+    />
 
     <!-- Start Google Analytics Script -->
     <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id={GA-ID}"></script>
