@@ -3,7 +3,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
-import TestimonialCarousel from '../components/TestimonialCarousel.astro';
+import TestimonialCarousel from '../components/TestimonialCarousel.astro'
 ---
 
 <DefaultLayout title="Home">
@@ -11,17 +11,22 @@ import TestimonialCarousel from '../components/TestimonialCarousel.astro';
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">Services</h2>
-      <h4 style="font-size: 1rem">We offer a lot of different services for end users and small businesses. Don't see something listed here? Reach out anyway and we can see about helping or point you in the right direction!</h4>
-      <br>
+      <h4 style="font-size: 1rem">
+        We offer a lot of different services for end users and small businesses. Don't see something listed here? Reach
+        out anyway and we can see about helping or point you in the right direction!
+      </h4>
+      <br />
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon="ion:call" title="Remote Support">
           Fast and reliable remote troubleshooting and support to resolve your IT issues without needing a site visit.
         </Feature>
         <Feature icon="ion:wrench" title="Device Maintenance">
-          Ensure your devices run smoothly and efficiently with our comprehensive maintenance services. Extend the life of your devices!
+          Ensure your devices run smoothly and efficiently with our comprehensive maintenance services. Extend the life
+          of your devices!
         </Feature>
         <Feature icon="mdi:wallet" title="Device Consultancy">
-          Expert advice on selecting, setting up, and optimizing devices to meet your specific needs, ensuring seamless integration and enhanced performance.
+          Expert advice on selecting, setting up, and optimizing devices to meet your specific needs, ensuring seamless
+          integration and enhanced performance.
         </Feature>
         <Feature icon="mdi:virus" title="Virus and Malware Removal">
           Is your PC infected with malware or viruses? We can help eliminate threats and secure your system!
@@ -30,19 +35,22 @@ import TestimonialCarousel from '../components/TestimonialCarousel.astro';
           Host your own services at home or decouple from the cloud with our expert home server solutions.
         </Feature>
         <Feature icon="mdi:cable-data" title="Network Design and Upgrade">
-          Upgrade your network with our tailored design and optimization services for better connectivity and performance.
+          Upgrade your network with our tailored design and optimization services for better connectivity and
+          performance.
         </Feature>
         <Feature icon="mdi:hammer-screwdriver" title="Custom PC Builds">
-          Whether you need a high-performance PC or one that fits your budget, we can build it for you! 
+          Whether you need a high-performance PC or one that fits your budget, we can build it for you!
         </Feature>
         <Feature icon="mdi:data" title="Data Recovery Services">
           Recover lost data from failed or broken devices with our specialized recovery solutions.
         </Feature>
         <Feature icon="mdi:cctv" title="Home & SMB Surveillance Solutions">
-          Secure your home or business with our comprehensive security camera systems, providing peace of mind while you’re away.
+          Secure your home or business with our comprehensive security camera systems, providing peace of mind while
+          you’re away.
         </Feature>
         <Feature icon="ion:md-cloud-upload" title="Backup Solutions">
-          Protect your data with automated onsite or cloud backup services. Ensure your information is safe and easily recoverable in the event of a disaster.
+          Protect your data with automated onsite or cloud backup services. Ensure your information is safe and easily
+          recoverable in the event of a disaster.
         </Feature>
         <Feature icon="ion:ios-settings" title="Software Installation and Configuration">
           Assistance with installing and configuring software to ensure it runs optimally on your devices.
@@ -68,12 +76,9 @@ import TestimonialCarousel from '../components/TestimonialCarousel.astro';
     </div>
   </section>
 
-
-    <section class="mb-32 mt-32">
+  <section class="mb-16 mt-16">
     <div class="container">
       <TestimonialCarousel />
     </div>
   </section>
-
-
 </DefaultLayout>

@@ -5,99 +5,181 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <DefaultLayout title="Scams">
-    <div class="container">
-        <h1 style="display: flex; justify-content: center; margin-bottom: 2rem;">Scams</h1>
-        <div id="scam-warning">
-            <Notification type="error">
-                <Icon name="ion:warning-outline"/>
-                <p>
-                    <strong>Stop!</strong> 
-                    <br></br>If you recieved a call from Alex’s Guardian it was most likely a scammer spoofing our number. We do not call people at random. All calls from Alex’s Guardian [<u><em> +1 717-573-0627</em></u> ] are first initiated through email chats, responding to a left voicemail, or if you are an existing client. All clients are issued a Client ID. If you are unsure that it is us, ask for your client ID number. We will never ask for your SSN/DOB/Credit Card info or banking info over the phone/email. The only information we would ask for are Names, Callback numbers, and email addresses for follow ups. All emails from Alex’s Guardian are sent via the <u><em>@alexsguardian.net</em></u> domain only!
-                </p>
-            </Notification>
-            <Notification type="info">
-                <Icon name="mdi:head-lightbulb-outline" />
-                <p>
-                If you did recieve a call, email, text, etc., please do not contact us and leave nasty messages. We try our best to mitigate these but there is only so much we can do. Simply <a style="color: blue" href="mailto:info@alexsguardian.net?subject=I Recieved A Scam Message" target="_blank">email us</a> and let us know you recieved a scam message and any details you can share. Thanks!
-                </p>
-            </Notification>
-        </div>
-        <div id="scam-def">
-            <h2>What Is A Scammer / Scam</h2>
-            <p style="padding-bottom: 20px">
-                A scammer is an individual or entity that engages in fraudulent activities to deceive and exploit others for financial gain or personal advantage. Scammers often employ various deceptive tactics, such as false promises, misinformation, or manipulation, to trick their victims into providing sensitive information, money, or valuable assets. They operate in different forms, including online scams, phone scams, email scams, and more. The primary goal of a scammer is to deceive and defraud others, leading to financial loss or other negative consequences for the victims. It’s essential to be cautious and vigilant to avoid falling victim to scams.
-            </p>
-            <h3>Common Scam Types:</h3>
-            <ul>
-                <li>
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>Phishing Scams</strong>: 
-                Scammers send deceptive emails or messages that appear to be from reputable organizations, such as banks or online services. They aim to trick recipients into providing personal information like passwords, credit card details, or login credentials.
-                </li>
-                <li>
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>Tech Support Scams</strong>: 
-                Scammers pretend to be tech support representatives from well-known companies and contact individuals claiming that their computer has a virus or technical issue. They offer to “help” by gaining access to the victim’s computer and may charge fees for unnecessary services or steal sensitive data.
-                </li>
-                <li>    
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>Online Purchase Scams</strong>: 
-                Scammers set up fake online stores or auction listings to sell products that either don’t exist or are significantly different from what is advertised. Victims pay for the items but never receive them.
-                </li>
-                <li>
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>Nigerian Prince Scams</strong>: 
-                This is a type of advance-fee scam where the scammer claims to be a wealthy individual, often a Nigerian prince, and offers to share their fortune with the victim. However, the victim needs to pay various fees or expenses upfront, which ultimately leads to financial loss.
-                </li>
-                <li>
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>Lottery or Prize Scams</strong>: 
-                Scammers inform victims that they have won a lottery or prize and ask for payment to cover taxes or processing fees before the winnings can be claimed. In reality, there is no prize, and the victim loses the money sent to the scammer.
-                </li>
-                <li>
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>Romance Scams (pig butchering)</strong>: 
-                Scammers create fake online dating profiles and form romantic relationships with victims. Once trust is established, they request money for various reasons, such as medical emergencies or travel expenses, but it’s all a ploy to extract money from the victim.
-                </li>
-                <li>
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>Investment Scams</strong>: 
-                Scammers offer fake investment opportunities promising high returns with little or no risk. Unsuspecting individuals invest money, but the scammer either disappears with the funds or provides false updates until the scheme collapses.
-                </li>
-                <li>
-                    <Icon name="mdi:dots-circle" style="display: inline"></Icon> <strong>IRS Impersonation Scams</strong>: 
-                Scammers impersonate IRS agents and contact individuals, claiming they owe back taxes and must make immediate payments to avoid legal consequences. They use fear and urgency to pressure victims into sending money.
-                </li>
-            </ul>
-            <br>
-            <p>
-                These are just a few examples of the many scams that exist. It’s crucial to stay informed and vigilant to protect yourself from falling victim to these fraudulent schemes. Remember to verify information, be cautious with personal data, and report any suspicious activities to relevant authorities. There are also people / groups that scam bait. See the below links for more info.
-            </p>
-            <br>
-            <div id="scam-def-2">
-                <ul>
-                    <li>
-                        <Icon name="mdi:dots-circle" style="display: inline"></Icon> Wikipedia [Scams & Fraud] <a href="https://en.wikipedia.org/wiki/Scam_(disambiguation)">https://en.wikipedia.org/wiki/Scam_(disambiguation)</a> & <a href="https://en.wikipedia.org/wiki/Fraud">https://en.wikipedia.org/wiki/Fraud</a>
-                    </li>
-                    <li>
-                        <Icon name="mdi:dots-circle" style="display: inline"></Icon> Wikipedia [Internet Fraud] <a href="https://en.wikipedia.org/wiki/Internet_fraud">https://en.wikipedia.org/wiki/Internet_fraud</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="scam-def">
-                <br>
-                <h2>What Are Scam Baiters?</h2>
-                <p>
-                    A scam baiter, also known as an Internet scam baiter or simply a baiter, is an individual who actively engages with scammers and online fraudsters with the intention of wasting their time, gathering information about their operations, and raising awareness about scams. Scam baiters typically pose as potential victims, using fake personas and email addresses to attract scammers. 
-                </p>
-                <br>
-                <p>
-                    Their primary objective  is to prevent scammers from targeting real victims and potentially causing financial or emotional harm. By engaging with scammers and leading them on, baiters disrupt their operations, making it more difficult for them to find actual victims and reducing their effectiveness. So even get into the scammers systems and cause havoc or get them shut down by authorities. They document their interactions with scammers, recording email exchanges, phone calls, or chat conversations, and then share these interactions publicly on websites, forums, or social media platforms. Through this process, they expose the tactics and techniques used by scammers, helping others recognize and avoid falling prey to similar scams.
-                </p>
-                <br>
-                <p>
-                    It’s important to note that scam baiting carries certain risks, and it should be done with caution. Engaging with scammers can lead to potential retaliation or even more harrasment, so individuals interested in scam baiting should take appropriate precautions and avoid revealing any personal information during the interactions. If you are curious and want to watch how some of the baiters work check out these videos from Scammer Payback, Jim Browning, Kitboga, and Pleasant Green on YouTube!
-                </p>
-                <div id="yt-vids">
-                    <iframe height="315" src="https://www.youtube.com/embed/_3RBNNbMhqs?si=MwI4ygr0ZvvviNxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe height="315" src="https://www.youtube.com/embed/vu-Y1h9rTUs?si=BL054ZNXVratT6V-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe height="315" src="https://www.youtube.com/embed/gtFEBY_9J30?si=MUjrIO72QFgePwzH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe height="315" src="https://www.youtube.com/embed/JlwQ2tPNSS8?si=Sk2s4YqDJVcPoM43" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <h1 style="display: flex; justify-content: center; margin-bottom: 2rem;">Scams</h1>
+    <div id="scam-warning">
+      <Notification type="error">
+        <Icon name="ion:warning-outline" />
+        <p>
+          <strong>Stop!</strong>
+          <br />
+        </p>If you recieved a call from Alex’s Guardian it was most likely a scammer spoofing our number. We do not call
+        people at random. All calls from Alex’s Guardian [<u><em> +1 717-573-0627</em></u> ] are first initiated through
+        email chats, responding to a left voicemail, or if you are an existing client. All clients are issued a Client ID.
+        If you are unsure that it is us, ask for your client ID number. We will never ask for your SSN/DOB/Credit Card info
+        or banking info over the phone/email. The only information we would ask for are Names, Callback numbers, and email
+        addresses for follow ups. All emails from Alex’s Guardian are sent via the <u><em>@alexsguardian.net</em></u> domain
+        only!
+      </Notification>
     </div>
+    <Notification type="info">
+      <Icon name="mdi:head-lightbulb-outline" />
+      <p>
+        If you did recieve a call, email, text, etc., please do not contact us and leave nasty messages. We try our best
+        to mitigate these but there is only so much we can do. Simply <a
+          style="color: blue"
+          href="mailto:info@alexsguardian.net?subject=I Recieved A Scam Message"
+          target="_blank">email us</a
+        > and let us know you recieved a scam message and any details you can share. Thanks!
+      </p>
+    </Notification>
+  </div>
+  <div id="scam-def">
+    <h2>What Is A Scammer / Scam</h2>
+    <p style="padding-bottom: 20px">
+      A scammer is an individual or entity that engages in fraudulent activities to deceive and exploit others for
+      financial gain or personal advantage. Scammers often employ various deceptive tactics, such as false promises,
+      misinformation, or manipulation, to trick their victims into providing sensitive information, money, or valuable
+      assets. They operate in different forms, including online scams, phone scams, email scams, and more. The primary
+      goal of a scammer is to deceive and defraud others, leading to financial loss or other negative consequences for
+      the victims. It’s essential to be cautious and vigilant to avoid falling victim to scams.
+    </p>
+    <h3>Common Scam Types:</h3>
+    <ul>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>Phishing Scams</strong>: Scammers send deceptive emails or messages that appear to be from reputable
+        organizations, such as banks or online services. They aim to trick recipients into providing personal
+        information like passwords, credit card details, or login credentials.
+      </li>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>Tech Support Scams</strong>: Scammers pretend to be tech support representatives from well-known
+        companies and contact individuals claiming that their computer has a virus or technical issue. They offer to
+        “help” by gaining access to the victim’s computer and may charge fees for unnecessary services or steal
+        sensitive data.
+      </li>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>Online Purchase Scams</strong>: Scammers set up fake online stores or auction listings to sell products
+        that either don’t exist or are significantly different from what is advertised. Victims pay for the items but
+        never receive them.
+      </li>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>Nigerian Prince Scams</strong>: This is a type of advance-fee scam where the scammer claims to be a
+        wealthy individual, often a Nigerian prince, and offers to share their fortune with the victim. However, the
+        victim needs to pay various fees or expenses upfront, which ultimately leads to financial loss.
+      </li>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>Lottery or Prize Scams</strong>: Scammers inform victims that they have won a lottery or prize and ask
+        for payment to cover taxes or processing fees before the winnings can be claimed. In reality, there is no prize,
+        and the victim loses the money sent to the scammer.
+      </li>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>Romance Scams (pig butchering)</strong>: Scammers create fake online dating profiles and form romantic
+        relationships with victims. Once trust is established, they request money for various reasons, such as medical
+        emergencies or travel expenses, but it’s all a ploy to extract money from the victim.
+      </li>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>Investment Scams</strong>: Scammers offer fake investment opportunities promising high returns with
+        little or no risk. Unsuspecting individuals invest money, but the scammer either disappears with the funds or
+        provides false updates until the scheme collapses.
+      </li>
+      <li>
+        <Icon name="mdi:dots-circle" style="display: inline" />
+        <strong>IRS Impersonation Scams</strong>: Scammers impersonate IRS agents and contact individuals, claiming they
+        owe back taxes and must make immediate payments to avoid legal consequences. They use fear and urgency to
+        pressure victims into sending money.
+      </li>
+    </ul>
+    <br />
+    <p>
+      These are just a few examples of the many scams that exist. It’s crucial to stay informed and vigilant to protect
+      yourself from falling victim to these fraudulent schemes. Remember to verify information, be cautious with
+      personal data, and report any suspicious activities to relevant authorities. There are also people / groups that
+      scam bait. See the below links for more info.
+    </p>
+    <br />
+    <div id="scam-def-2">
+      <ul>
+        <li>
+          <Icon name="mdi:dots-circle" style="display: inline" /> Wikipedia [Scams & Fraud] <a
+            href="https://en.wikipedia.org/wiki/Scam_(disambiguation)"
+            >https://en.wikipedia.org/wiki/Scam_(disambiguation)</a
+          > & <a href="https://en.wikipedia.org/wiki/Fraud">https://en.wikipedia.org/wiki/Fraud</a>
+        </li>
+        <li>
+          <Icon name="mdi:dots-circle" style="display: inline" /> Wikipedia [Internet Fraud] <a
+            href="https://en.wikipedia.org/wiki/Internet_fraud">https://en.wikipedia.org/wiki/Internet_fraud</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div id="scam-def">
+      <br />
+      <h2>What Are Scam Baiters?</h2>
+      <p>
+        A scam baiter, also known as an Internet scam baiter or simply a baiter, is an individual who actively engages
+        with scammers and online fraudsters with the intention of wasting their time, gathering information about their
+        operations, and raising awareness about scams. Scam baiters typically pose as potential victims, using fake
+        personas and email addresses to attract scammers.
+      </p>
+      <br />
+      <p>
+        Their primary objective is to prevent scammers from targeting real victims and potentially causing financial or
+        emotional harm. By engaging with scammers and leading them on, baiters disrupt their operations, making it more
+        difficult for them to find actual victims and reducing their effectiveness. So even get into the scammers
+        systems and cause havoc or get them shut down by authorities. They document their interactions with scammers,
+        recording email exchanges, phone calls, or chat conversations, and then share these interactions publicly on
+        websites, forums, or social media platforms. Through this process, they expose the tactics and techniques used
+        by scammers, helping others recognize and avoid falling prey to similar scams.
+      </p>
+      <br />
+      <p>
+        It’s important to note that scam baiting carries certain risks, and it should be done with caution. Engaging
+        with scammers can lead to potential retaliation or even more harrasment, so individuals interested in scam
+        baiting should take appropriate precautions and avoid revealing any personal information during the
+        interactions. If you are curious and want to watch how some of the baiters work check out these videos from
+        Scammer Payback, Jim Browning, Kitboga, and Pleasant Green on YouTube!
+      </p>
+      <div id="yt-vids">
+        <iframe
+          height="315"
+          src="https://www.youtube.com/embed/_3RBNNbMhqs?si=MwI4ygr0ZvvviNxs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <iframe
+          height="315"
+          src="https://www.youtube.com/embed/vu-Y1h9rTUs?si=BL054ZNXVratT6V-"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <iframe
+          height="315"
+          src="https://www.youtube.com/embed/gtFEBY_9J30?si=MUjrIO72QFgePwzH"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <iframe
+          height="315"
+          src="https://www.youtube.com/embed/JlwQ2tPNSS8?si=Sk2s4YqDJVcPoM43"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 </DefaultLayout>

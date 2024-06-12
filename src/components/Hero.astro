@@ -11,7 +11,7 @@ const { src = '/hero.webp' } = Astro.props
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
           <slot><span class="text-gradient">Alex's Guardian</span></slot>
         </h1>
-        <h3 >
+        <h3>
           <slot>Transparent IT, No Surprises.</slot>
         </h3>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
@@ -28,7 +28,14 @@ const { src = '/hero.webp' } = Astro.props
           </a> -->
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="Laptop on a desk with a toolbag next to it" decoding="async" height="743" width="710"/>
+      <img
+        class="hidden lg:block"
+        src={src}
+        alt="Laptop on a desk with a toolbag next to it"
+        decoding="async"
+        height="743"
+        width="710"
+      />
     </div>
   </div>
 </section>
