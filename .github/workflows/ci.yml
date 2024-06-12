@@ -29,12 +29,13 @@ jobs:
         with:
           token: "${{ secrets.LINODE_CLI_TOKEN }}"
 
-      - name: build dev
+      - name: build prod
         id: build
         run: |
           sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
+          rm ./dist/testimonials.json
 
       - name: Setup SSH
         id: ssh-setup
@@ -54,8 +55,8 @@ jobs:
           wget https://raw.githubusercontent.com/alexandzors/utils/main/linode-scripts/linode.sh
           bash ./linode.sh -a --verbose
       
-      - name: deploy blog
-        uses: burnett01/rsync-deployments@5.2.1
+      - name: deploy site
+        uses: burnett01/rsync-deployments@7.0.1
         id: deploy
         with:
           switches: -avr
@@ -69,6 +70,10 @@ jobs:
       - name: Close Linode Cloud Firewall for GH
         if: always()
         id: linode-fw-close
+        env:
+          PUB_IP: "${{ steps.ip.outputs.ipv4 }}/32"
+          HOME_IP: "${{ secrets.HOMEIP }}"
+          LINODE_FW_ID: "${{ secrets.LINODE_FW_ID }}"
         run: |
           bash ./linode.sh -d --verbose
 
@@ -97,7 +102,9 @@ jobs:
       - name: build dev
         id: build
         run: |
+          sed -i -e 's#alexsguardian.net#dev.alexsugardian.net#g' ./src/components/SiteMeta.astro
           sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID_DEV }}'#g' ./src/layouts/DefaultLayout.astro
+          sed -i '51i \ \ \ \ <Announcement />' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
       
@@ -142,8 +149,8 @@ jobs:
           wget https://raw.githubusercontent.com/alexandzors/utils/main/linode-scripts/linode.sh
           bash ./linode.sh -a --verbose
       
-      - name: deploy blog
-        uses: burnett01/rsync-deployments@5.2.1
+      - name: deploy site
+        uses: burnett01/rsync-deployments@7.0.1
         id: deploy
         with:
           switches: -avr
@@ -157,5 +164,9 @@ jobs:
       - name: Close Linode Cloud Firewall for GH
         if: always()
         id: linode-fw-close
+        env:
+          PUB_IP: "${{ steps.ip.outputs.ipv4 }}/32"
+          HOME_IP: "${{ secrets.HOMEIP }}"
+          LINODE_FW_ID: "${{ secrets.LINODE_FW_ID }}"
         run: |
           bash ./linode.sh -d --verbose

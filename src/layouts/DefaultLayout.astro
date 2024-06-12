@@ -4,10 +4,11 @@ import '../assets/scss/globals.scss'
 import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import Announcement from '../components/Announcement.astro'
 
 const {
   title = "Alex's Guardian",
-  description = "Alex's Guardian is an IT consulting & servicing company that specializes in mostly local end users and small businesses.Alex's Guardian is based out of Manheim, PA",
+  description = "Alex's Guardian is an IT consulting & servicing company that specializes in end users and small businesses.",
   url,
   image = '/social-preview-image.png',
   author = 'Alexander Henderson',
@@ -22,29 +23,28 @@ const {
 
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <!-- SiteMeta -->
     <SiteMeta
       title={title}
-      description={description.substring(0, 100)}
+      description={description}
       url={Astro.site
         ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
         : `https://alexsguardian.net/${title.toLowerCase().replaceAll(' ', '-')}`}
       image={image}
       author={author}
     />
-    
+
     <!-- Start Google Analytics Script -->
-    <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id={GA-ID}">
-    </script>
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id={GA-ID}"></script>
     <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
-      gtag("config", "{GA-ID}");
+      gtag('js', new Date())
+      gtag('config', '{GA-ID}')
     </script>
     <!-- End Google Analytics Script -->
   </head>
