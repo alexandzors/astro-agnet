@@ -32,10 +32,10 @@ jobs:
       - name: build prod
         id: build
         run: |
+          wget -O ./public/testimonials.json ${{ secrets.TESTIMONIAL_JSON_URL }}
           sed -i -e 's#{GA-ID}#'${{ secrets.GOOGLE_ANALYTICS_ID }}'#g' ./src/layouts/DefaultLayout.astro
           npm install
           npm run build
-          rm ./dist/testimonials.json
 
       - name: Setup SSH
         id: ssh-setup
