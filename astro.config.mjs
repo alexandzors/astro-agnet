@@ -28,7 +28,6 @@ export default defineConfig({
       // Filter out unready pages from sitemap
       filter: (page) =>
         page !== 'https://alexsguardian.net/support/' &&
-        page !== 'https://alexsguardian.net//accessible-components/' &&
         page !== 'https://alexsguardian.net/contact/',
     }),
   ],
