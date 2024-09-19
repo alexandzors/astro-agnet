@@ -10,16 +10,16 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       <h2>Introduction</h2>
       <p>
         Welcome to Alex's Guardian. We value your privacy and are committed to protecting your personal information.
-        This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website,
-        including our blog subdomain, or use our services.
+        This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website.
+        Including the Alex's blog subdomain, or other services we offer.
       </p>
       <br />
       <h2>Information We Collect</h2>
       <p>We collect the following information to provide and improve our services:</p>
       <ul>
-        <li><strong>Personal Information</strong>: Names, Email addresses, Phone numbers, and Voicemails.</li>
+        <li><strong>Personal Information</strong>: Names, Email addresses, Phone numbers, Voicemails, and Physical Addresses.</li>
         <li>
-          <strong>Usage Data</strong>: Information on how you interact with our website and blog, collected through
+          <strong>Usage Data</strong>: Information on how you interact with our website, Alex's blog, and other services are collected through
           Google Analytics for site performance and improvement.
         </li>
       </ul>
@@ -40,11 +40,31 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       <ul>
         <li>
           <strong>To Provide and Improve Services</strong>: Your personal information is used to deliver our services,
-          including invoicing and communication.
+          including invoicing and communication. The following information is stored in our invoicing & customer information database:
+          <ul>
+            <li>
+              - First and Last name
+            </li>
+            <li>
+              - Email Address
+            </li>
+            <li>
+              - Physical Address of Residenence or Business
+            </li>
+            <li>
+              - Contact Phone Number
+            </li>
+            <li>
+              - Past Invoices
+            </li>
+            <li>
+              - Device Repair History
+            </li>
+          </ul>
+          <i>All of the above information is stored in house. No customer information is stored in the "Cloud."</i>
         </li>
         <li>
-          <strong>Analytics</strong>: Usage data collected via Google Analytics helps us understand how our website and
-          blog are used, allowing us to enhance user experience and content quality.
+          <strong>Analytics</strong>: Usage data collected via Google Analytics helps us understand how our website, Alex's blog, and other serivces are used. Allowing us to enhance user experience, service and content quality.
         </li>
         <li>
           <strong>Comments</strong>: Comments made through Giscus are publicly displayed and associated with your GitHub
@@ -89,13 +109,13 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       <br />
       <h2>Cookies</h2>
       <p>
-        Our website and blog use cookies to enhance your browsing experience. Cookies are small data files placed on
+        Alex's Guardian and Alex's blog use cookies to enhance your browsing experience. Cookies are small data files placed on
         your device to help us understand how you use our site and improve our services.
       </p>
       <br />
       <h2>Google Analytics</h2>
       <p>
-        We use Google Analytics to collect information about your use of our website and blog. Google Analytics collects
+        We use Google Analytics to collect information about your use of Alex's Guardian and Alex's blog. Google Analytics collects
         information such as your IP address, browser type, referring/exit pages, and the dates/times of visits. This
         information helps us analyze website traffic and improve our services. Google Analytics operates independently
         and has its own privacy policy, which we encourage you to review.
@@ -110,8 +130,8 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       <h2>Contact Us</h2>
       <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
       <ul>
-        <li><strong>Email</strong>: info@alexsguardian.net</li>
-        <li><strong>Phone</strong>: +1 717-573-0627</li>
+        <li><strong>Email</strong>: <a href="mailto:info@alexsguardian.net" target="_blank">info@alexsguardian.net</a></li>
+        <li><strong>Phone</strong>: <a href="tel:+17175730627" target="_blank">+1 717-573-0627</a></li>
       </ul>
       <p>
         Thank you for trusting Alex's Guardian with your personal information. We are committed to protecting your
@@ -126,6 +146,9 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       }
       h2 {
         margin-bottom: 0.2rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
       }
     }
   </style>
